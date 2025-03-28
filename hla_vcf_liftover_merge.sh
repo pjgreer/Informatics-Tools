@@ -7,7 +7,7 @@ do
     for HLA in "${arr[@]}"
     do
       java -jar ~/bin/picard.jar LiftoverVcf \
-          -I ${LINE}/HLA_DQA1.rephase.vcf.gz \
+          -I ${LINE}/${HLA}.rephase.vcf.gz \
           -O ${LINE}/${LINE}-${HLA}.rephase.hg38.vcf \
           -CHAIN ~/HLA_liftover_refs/liftover.chn \
           -REJECT ${LINE}/${LINE}-${HLA}-rejected_variants.vcf \
